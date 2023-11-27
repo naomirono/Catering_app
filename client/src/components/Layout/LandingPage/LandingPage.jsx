@@ -1,20 +1,26 @@
-// src/components/LandingPage.js
 import React from 'react';
 
 const LandingPage = () => {
   return (
-    <div className="bg-gray-100 min-h-screen flex items-center justify-center ">
+    <div 
+    className="bg-gray-100 min-h-screen flex items-center justify-center "
+    style={{
+        background: `url('/src/assets/catering2.jpg') center center no-repeat`,
+        backgroundSize: 'contain',
+      }}
+      >
+      
       <div className=" bg-white p-8 rounded shadow-lg">
-        <h2 className="text-3xl font-bold mb-4">Chef App</h2>
+        <h2 className="text-3xl font-bold mb-4">Chef Connect</h2>
 
         {/* Search Bar */}
-        <div className="mb-4">
+        {/* <div className="mb-4">
           <input
             type="text"
             placeholder="Search for a cuisine or chef"
             className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500"
           />
-        </div>
+        </div> */}
 
         {/* Filters */}
         <div className="flex items-center space-x-4 mb-6">
