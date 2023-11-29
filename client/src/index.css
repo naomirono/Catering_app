@@ -57,6 +57,10 @@
     --z-modal: 1000;
 }
 
+body.black-background {
+    background-color: black;
+  }
+
 .custom-container {
     max-width: 1100px;
     margin-left: auto;
