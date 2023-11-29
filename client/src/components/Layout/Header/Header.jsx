@@ -20,8 +20,8 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-blue-500 text-white p-4">
-      <div className="container mx-auto flex items-center justify-between">
+    <header className="bg-black text-white p-4 ">
+      <div className="container mx-auto custom-container flex items-center justify-between">
         <div>
           <h1 className="text-xl font-semibold">Chef Connect</h1>
         </div>
