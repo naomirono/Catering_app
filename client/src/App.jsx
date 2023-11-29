@@ -1,5 +1,5 @@
-import './App.css'
 import Header from './components/Layout/Header/Header'
+import Hero from './components/Layout/Hero/Hero'
 import LandingPage from './components/Layout/LandingPage/LandingPage'
 
 function App() {
@@ -7,6 +7,7 @@ function App() {
   return (
     <>
       <Header/>
+      <Hero/>
       <LandingPage/>
       
     </>
