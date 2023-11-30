@@ -1,5 +1,6 @@
 import Header from './components/Layout/Header/Header'
 import Hero from './components/Layout/Hero/Hero'
+import FeaturedChefsSection from './components/Layout/Featured/FeaturedChefsSection'
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
     <>
       <Header/>
       <Hero/>
+      <FeaturedChefsSection/>
       
       </>
   )
