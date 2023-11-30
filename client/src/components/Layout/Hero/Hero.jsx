@@ -65,8 +65,8 @@ const Hero = () => {
 
       
 
-      <div className="flex items-center justify-center z-10 absolute bottom-[-45px] right-[250px]">
-  <div className="bg-white bg-opacity-40 backdrop-filter backdrop-blur-l p-4 rounded shadow-lg max-w-[1100px] mx-auto ">
+      <div className="flex items-center justify-center z-10 absolute bottom-[-55px] right-[250px]">
+  <div className="bg-white bg-opacity-40 backdrop-filter backdrop-blur-l px-4 pt-4 pb-6 rounded shadow-lg max-w-[1100px] mx-auto ">
     <h2 className="text-3xl font-bold mb-4">Chef Connect</h2>
 
     {/* Filters */}
@@ -75,27 +75,33 @@ const Hero = () => {
         className=" px-4 py-2 rounded-md focus:outline-none focus:border-blue-500 bg-white bg-opacity-40 backdrop-filter backdrop-blur-l"
       >
         <option value="">Select Cuisine</option>
-        {/* Add your cuisine options here */}
+        <option value="nyama-choma">Nyama Choma</option>
+        <option value="ugali-fish">Ugali and Fish</option>
+        <option value="sukuma-wiki">Sukuma Wiki</option>
       </select>
 
       <select
-        className=" px-4 py-2 rounded-md focus:outline-none focus:border-blue-500 bg-white bg-opacity-40 backdrop-filter backdrop-blur-l"
+        className=" px-4 py-2 rounded-md focus:outline-none focus:border-orange-500 bg-white bg-opacity-40 backdrop-filter backdrop-blur-l"
       >
         <option value="">Select Rating</option>
-        {/* Add your rating options here */}
+        <option value="5">5 Stars</option>
+        <option value="4">4 Stars</option>
+        <option value="3">3 Stars</option>
       </select>
 
       <select
         className=" px-4 py-2 rounded-md focus:outline-none focus:border-blue-500 bg-white bg-opacity-40 backdrop-filter backdrop-blur-l"
       >
         <option value="">Select Availability</option>
-        {/* Add your availability options here */}
+        <option value="lunch">Lunch</option>
+        <option value="dinner">Dinner</option>
+        <option value="weekends">Weekends</option>
       </select>
 
       <input
         type="text"
         placeholder="Enter Location"
-        className=" px-4 py-2 rounded-md focus:outline-none focus:border-blue-500 bg-white bg-opacity-40 backdrop-filter backdrop-blur-l"
+        className="placeholder:text-black px-4 py-2 rounded-md focus:outline-none focus:border-blue-500 bg-white bg-opacity-40 backdrop-filter backdrop-blur-l"
       />
 
       {/* Get Started Button */}
@@ -103,6 +109,7 @@ const Hero = () => {
         Search
       </button>
     </div>
+    
   </div>
 </div>
 
