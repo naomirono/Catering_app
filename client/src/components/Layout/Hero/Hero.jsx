@@ -24,7 +24,7 @@ const Hero = () => {
               Dive into a realm of flavors and aromas. Chef Connect brings the finest chefs to your doorstep, turning every meal into a celebration of taste and innovation.
             </p>
 
-            <button className="bg-blue-500 text-white py-2 px-4 mb-12 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue">
+            <button className="bg-orange-500 text-white py-2 px-4 mb-12 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue">
               Get Started
             </button>
 
@@ -51,7 +51,7 @@ const Hero = () => {
               <img
                 src="/src/assets/chef2.jpg"
                 alt="Image"
-                className="w-full md:w-5/6 h-[500px] md:max-w-md ml-[80px] hero-img"
+                className="w-full md:w-5/6 h-[500px] md:max-w-md ml-[80px] border-2 border-orange-500"
               />
               <img
                 src="/src/assets/Chefbg9.png"
@@ -62,6 +62,9 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      
+
       <div className="flex items-center justify-center z-10 absolute bottom-[-45px] right-[250px]">
   <div className="bg-white bg-opacity-40 backdrop-filter backdrop-blur-l p-4 rounded shadow-lg max-w-[1100px] mx-auto ">
     <h2 className="text-3xl font-bold mb-4">Chef Connect</h2>
@@ -96,7 +99,7 @@ const Hero = () => {
       />
 
       {/* Get Started Button */}
-      <button className="bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue active:bg-blue-800">
+      <button className="bg-orange-500 text-white py-2 px-6 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue active:bg-blue-800">
         Search
       </button>
     </div>
