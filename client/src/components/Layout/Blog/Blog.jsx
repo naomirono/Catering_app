@@ -28,15 +28,17 @@ const Blog = () => {
     <section className="py-16">
       <div className="container mx-auto max-w-[1100px]">
         <div className='text-center mb-8'>
-          <h2 className="text-5xl font-bold text-white">Chef Tips and <span className='text-orange-500'>Recipes</span> </h2>
+          <h2 className="text-5xl font-bold text-white">Chef Tips and <span className='text-orange-500'>Recipes</span></h2>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+            <div key={index} className="bg-white p-6 rounded-lg shadow-md flex flex-col h-full">
               <h3 className="text-xl font-semibold mb-4">{post.title}</h3>
-              <p className="text-gray-600 mb-4">{post.content}</p>
-              <p className="text-sm text-gray-500 mb-4">{`By ${post.author} on ${post.date}`}</p>
+              <div className="flex-grow overflow-hidden">
+                <p className="text-gray-600">{post.content}</p>
+              </div>
+              <p className="text-sm text-gray-500 mt-4">{`By ${post.author} on ${post.date}`}</p>
               <div className="mt-4">
                 <a
                   href="#"
