@@ -27,17 +27,20 @@ const Blog = () => {
   return (
     <section className="bg-gray-100 py-16">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold mb-8">Chef Tips and Recipes</h2>
+        <div className='text-center mb-8'>
+          <h2 className="text-3xl font-bold">Chef Tips and Recipes</h2>
+        </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold mb-4">{post.title}</h3>
-              <p className="text-gray-600">{post.content}</p>
-              <div className="mt-4 flex items-center justify-between">
-                <p className="text-sm text-gray-500">{`By ${post.author} on ${post.date}`}</p>
+              <p className="text-gray-600 mb-4">{post.content}</p>
+              <p className="text-sm text-gray-500 mb-4">{`By ${post.author} on ${post.date}`}</p>
+              <div className="mt-4">
                 <a
                   href="#"
-                  className="text-blue-500 hover:underline"
+                  className="block text-blue-500 hover:underline"
                 >
                   Read More
                 </a>
