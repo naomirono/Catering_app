@@ -25,10 +25,10 @@ const Blog = () => {
   ];
 
   return (
-    <section className="bg-gray-100 py-16">
-      <div className="container mx-auto">
+    <section className="py-16">
+      <div className="container mx-auto max-w-[1100px]">
         <div className='text-center mb-8'>
-          <h2 className="text-3xl font-bold">Chef Tips and Recipes</h2>
+          <h2 className="text-5xl font-bold text-white">Chef Tips and <span className='text-orange-500'>Recipes</span> </h2>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -40,7 +40,7 @@ const Blog = () => {
               <div className="mt-4">
                 <a
                   href="#"
-                  className="block text-blue-500 hover:underline"
+                  className="block text-orange-500 hover:underline"
                 >
                   Read More
                 </a>
