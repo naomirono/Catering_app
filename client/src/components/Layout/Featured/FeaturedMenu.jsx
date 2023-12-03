@@ -13,17 +13,17 @@ const menusData = [
   },
   {
     id: 2,
-    title: 'Sukuma Wiki Fusion',
-    description: 'Experience the fusion of Sukuma Wiki, a popular Kenyan collard greens dish, with international flavors. Chef Ahmed Ali brings a unique twist to this classic dish, making it a culinary delight.',
-    price: '$24.99',
+    title: 'Skewed Chicken Breast',
+    description: 'Treat your taste buds to our Skewed Chicken Breast, expertly prepared and grilled to perfection. Chef Sarah Kamau infuses bold flavors, creating a dish thats both succulent and savory.',
+    price: '$27.99',
     chef: 'Chef Ahmed Ali',
     image: '/src/assets/CateringMenu6.png', // Replace with actual image URL
   },
   {
     id: 3,
-    title: 'Ugali Paradise',
-    description: 'Embark on a journey to Ugali Paradise with Chef Amina Odhiambo. Our chef crafts the perfect Ugali, a staple Kenyan dish, served with an array of mouth-watering accompaniments.',
-    price: '$22.99',
+    title: 'Meatballs Spaghetti Extravaganza',
+    description: 'Delight in our Meatballs Spaghetti Extravaganza, a culinary masterpiece by Chef Michael Omondi. Enjoy the perfect blend of Italian-inspired spaghetti and savory meatballs, topped with rich tomato sauce.',
+    price: '$32.99',
     chef: 'Chef Amina Odhiambo',
     image: '/src/assets/CateringMenu3..png', // Replace with actual image URL
   },
@@ -43,7 +43,7 @@ const FeaturedMenus = () => {
               {menu.id === 1 && (
                 <>
                   <img src={menu.image} alt={menu.title} className="w-[200px] h-[200px] object-cover mr-8 rounded border" />
-                  <div className=' border pl-4'>
+                  <div className=' border' style={{ marginLeft: '40px' }}>
                     <h3 className="text-xl font-semibold mb-2">{menu.title}</h3>
                     <p className="text-gray-600 mb-4">{menu.description}</p>
                     <p className="text-orange-500 font-semibold">{menu.price}</p>
@@ -65,7 +65,7 @@ const FeaturedMenus = () => {
               {menu.id === 3 && (
                 <>
                   <img src={menu.image} alt={menu.title} className="w-[200px] h-[200px] object-cover mr-8 rounded  border" />
-                  <div className=' border'>
+                  <div className=' border' style={{ marginLeft: '40px' }}>
                     <h3 className="text-xl font-semibold mb-2">{menu.title}</h3>
                     <p className="text-gray-600 mb-4">{menu.description}</p>
                     <p className="text-orange-500 font-semibold">{menu.price}</p>
