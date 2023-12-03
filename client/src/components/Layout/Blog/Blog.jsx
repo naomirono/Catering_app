@@ -31,8 +31,15 @@ const BlogRecipeSection = () => {
   ];
 
   return (
-    <section className="py-16">
-      <div className="container mx-auto max-w-[1100px]">
+    <section className=" py-16 relative"
+    style={{
+        backgroundImage: "url('/src/assets/catering1.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}>
+      <div className="absolute inset-0 bg-black opacity-90"></div>
+
+      <div className="container mx-auto max-w-[1100px] relative z-10">
         <div className='text-center mb-8'>
           <h2 className="text-5xl font-bold text-white mb-4">Chef Tips and <span className='text-orange-500'>Recipes</span></h2>
           <p className="text-lg text-gray-500 mb-12">Indulge in culinary excellence with Chef Tips and Recipes – your passport to a world of delicious creations. From grilling mastery to festive treats, our chefs unlock the secrets behind extraordinary meals.</p>
@@ -47,7 +54,7 @@ const BlogRecipeSection = () => {
                   {post.content}
                   <a
                     href="#"
-                    className="text-orange-500 hover:underline ml-1"
+                    className="text-orange-500"
                   >
                     ...Read More
                   </a>
