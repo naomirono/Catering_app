@@ -13,8 +13,9 @@ function App() {
       <Hero/>
       <HowItWorks/>
       <FeaturedChefsSection/>
-      <Blog/>
       <FeaturedMenus/>
+      <Blog/>
+      
       
       </>
   )
