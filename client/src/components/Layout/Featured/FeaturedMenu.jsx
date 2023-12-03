@@ -30,6 +30,12 @@ const menusData = [
 ];
 
 const FeaturedMenus = () => {
+
+  const handleViewProfile = (chefName) => {
+    // Navigate to the specific chef's profile page or perform any other action
+    console.log(`View profile of Chef ${chefName}`);
+  };
+
   return (
     <section className="py-16">
       <div className="container mx-auto max-w-[900px]">
@@ -39,37 +45,39 @@ const FeaturedMenus = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8">
           {menusData.map((menu) => (
-            <div key={menu.id} className="bg-white rounded-lg shadow-md flex">
+            <div key={menu.id} className=" flex">
               {menu.id === 1 && (
                 <>
-                  <img src={menu.image} alt={menu.title} className="w-[200px] h-[200px] object-cover mr-8 rounded border" />
-                  <div className=' border' style={{ marginLeft: '40px' }}>
-                    <h3 className="text-xl font-semibold mb-2">{menu.title}</h3>
+                  <img src={menu.image} alt={menu.title} className="w-[200px] h-[200px] object-cover mr-8 " />
+                  <div style={{ marginLeft: '40px' }}>
+                    <h3 className="text-xl font-semibold mb-2 text-white ">{menu.title}</h3>
                     <p className="text-gray-600 mb-4">{menu.description}</p>
                     <p className="text-orange-500 font-semibold">{menu.price}</p>
-                    <p className="text-sm text-gray-500 mt-2">{`By ${menu.chef}`}</p>
+                    <p className="text-sm text-gray-500 mt-2 hover:text-orange-500" onClick={() => handleViewProfile(menu.chef)}>{`By ${menu.chef}`}</p>
                   </div>
                 </>
               )}
               {menu.id === 2 && (
                 <>
-                  <div className=' border '>
-                    <h3 className="text-xl font-semibold mb-2">{menu.title}</h3>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2 text-white ">{menu.title}</h3>
                     <p className="text-gray-600 mb-4">{menu.description}</p>
                     <p className="text-orange-500 font-semibold">{menu.price}</p>
-                    <p className="text-sm text-gray-500 mt-2">{`By ${menu.chef}`}</p>
+                    <p className="text-sm text-gray-500 mt-2 hover:text-orange-500" onClick={() => handleViewProfile(menu.chef)}>{`By ${menu.chef}`}</p>
+                
                   </div>
-                  <img src={menu.image} alt={menu.title} className="w-[200px] h-[200px] object-cover ml-8 rounded  border" />
+                  <img src={menu.image} alt={menu.title} className="w-[200px] h-[200px] object-cover ml-8 rounded" />
                 </>
               )}
               {menu.id === 3 && (
                 <>
-                  <img src={menu.image} alt={menu.title} className="w-[200px] h-[200px] object-cover mr-8 rounded  border" />
-                  <div className=' border' style={{ marginLeft: '40px' }}>
-                    <h3 className="text-xl font-semibold mb-2">{menu.title}</h3>
+                  <img src={menu.image} alt={menu.title} className="w-[200px] h-[200px] object-cover mr-8 rounded" />
+                  <div style={{ marginLeft: '40px' }}>
+                    <h3 className="text-xl font-semibold mb-2 text-white ">{menu.title}</h3>
                     <p className="text-gray-600 mb-4">{menu.description}</p>
                     <p className="text-orange-500 font-semibold">{menu.price}</p>
-                    <p className="text-sm text-gray-500 mt-2">{`By ${menu.chef}`}</p>
+                    <p className="text-sm text-gray-500 mt-2 hover:text-orange-500" onClick={() => handleViewProfile(menu.chef)}>{`By ${menu.chef}`}</p>
+                    
                   </div>
                 </>
               )}
