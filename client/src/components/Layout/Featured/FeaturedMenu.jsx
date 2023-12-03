@@ -3,21 +3,22 @@
 import React from 'react';
 
 const menusData = [
+  
   {
     id: 1,
-    title: 'Nyama Choma Delight',
-    description: 'Indulge in the rich flavors of Nyama Choma, a traditional Kenyan barbecue dish. Our chef grills premium cuts of meat to perfection, seasoned with a secret blend of Kenyan spices.',
-    price: '$30.99',
-    chef: 'Chef Wanjiku Njoroge',
-    image: '/src/assets/CateringMenu1.png', // Replace with actual image URL
-  },
-  {
-    id: 2,
     title: 'Skewed Chicken Breast',
     description: 'Treat your taste buds to our Skewed Chicken Breast, expertly prepared and grilled to perfection. Chef Sarah Kamau infuses bold flavors, creating a dish thats both succulent and savory.',
     price: '$27.99',
     chef: 'Chef Ahmed Ali',
     image: '/src/assets/CateringMenu6.png', // Replace with actual image URL
+  },
+  {
+    id: 2,
+    title: 'Nyama Choma Delight',
+    description: 'Indulge in the rich flavors of Nyama Choma, a traditional Kenyan barbecue dish. Our chef grills premium cuts of meat to perfection, seasoned with a secret blend of Kenyan spices.',
+    price: '$30.99',
+    chef: 'Chef Wanjiku Njoroge',
+    image: '/src/assets/CateringMenu1.png', // Replace with actual image URL
   },
   {
     id: 3,
@@ -38,14 +39,14 @@ const FeaturedMenus = () => {
 
   return (
     <section className="py-16">
-      <div className="container mx-auto max-w-[900px]">
-       <div className='text-center'>
-       <h2 className="text-5xl font-bold mb-12 text-white">Featured Kenyan Menus</h2>
+      <div className="container mx-auto max-w-[800px]">
+       <div className='text-center mb-14'>
+       <h2 className="text-5xl font-bold  text-white">Featured <span className='text-orange-500'>Menus</span></h2>
        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8">
           {menusData.map((menu) => (
-            <div key={menu.id} className=" flex">
+            <div key={menu.id} className="py-2 flex">
               {menu.id === 1 && (
                 <>
                   <img src={menu.image} alt={menu.title} className="w-[200px] h-[200px] object-cover mr-8 " />
