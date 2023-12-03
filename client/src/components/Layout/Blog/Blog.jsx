@@ -51,9 +51,11 @@ const BlogRecipeSection = () => {
                   alt={`Profile of ${post.author}`}
                   className="w-8 h-8 rounded-full mr-2"
                 />
-                <p className="text-sm text-gray-500">{post.author}</p>
+                <div>
+                  <p className="text-sm text-gray-500">{post.author}</p>
+                  <p className="text-sm text-gray-500">{`${post.date} . ${post.time} read`}</p>
+                </div>
               </div>
-              <p className="text-sm text-gray-500">{`${post.date} . ${post.time} read`}</p>
               <div className="mt-4">
                 <a
                   href="#"
