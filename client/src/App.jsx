@@ -4,6 +4,7 @@ import FeaturedChefsSection from './components/Layout/Featured/FeaturedChefsSect
 import HowItWorks from './components/Layout/HowItWorks/HowItWorks'
 import Blog from './components/Layout/Blog/Blog'
 import FeaturedMenus from './components/Layout/Featured/FeaturedMenu'
+import SpecialOccasions from './components/Layout/SpecialOcassion/SpecialOccasion'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <FeaturedChefsSection/>
       <FeaturedMenus/>
       <Blog/>
+      <SpecialOccasions/>
       
       
       </>
