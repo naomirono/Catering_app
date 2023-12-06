@@ -24,7 +24,7 @@ const NewsletterSubscription = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}>
-        <div className="absolute inset-0 bg-black opacity-80"></div>
+        <div className="absolute inset-0 bg-black opacity-75"></div>
         <div className="p-16 relative z-10 flex flex-col items-center justify-center max-w-[800px] mx-auto">
           <h2 className="text-3xl font-bold mb-4 text-white">Subscribe to Our Newsletter </h2>
           <p className="text-gray-400 mb-14">
