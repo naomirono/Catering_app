@@ -48,7 +48,6 @@ const SpecialOccasionsSection = () => {
       <div className="container mx-auto max-w-[900px]">
         <h2 className="text-5xl font-bold mb-8 text-white">Special Occasions with <span className='text-orange-500'>Personal Chefs</span></h2>
         
-        
         <div className="flex mb-8">
           {specializations.map((specialization) => (
             <button
