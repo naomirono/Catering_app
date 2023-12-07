@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaStar } from 'react-icons/fa';
+import { FaStar, FaQuoteLeft } from 'react-icons/fa';
 
 const renderStars = (rating) => {
   const starCount = 5;
@@ -8,7 +8,7 @@ const renderStars = (rating) => {
 
   const stars = [];
   for (let i = 0; i < fullStarCount; i++) {
-    stars.push(<FaStar key={`full-star-${i}`} className="text-yellow-500" />);
+    stars.push(<FaStar key={`full-star-${i}`} className="text-orange-500" />);
   }
   for (let i = 0; i < remainingStarCount; i++) {
     stars.push(<FaStar key={`empty-star-${i}`} className="text-gray-300" />);
@@ -16,6 +16,14 @@ const renderStars = (rating) => {
 
   return stars;
 };
+
+const handlePrevClick = () => {
+    sliderRef.current.slickPrev();
+  };
+
+  const handleNextClick = () => {
+    sliderRef.current.slickNext();
+  };
 
 const Review = ({ name, image, rating, review }) => {
   return (
@@ -33,7 +41,7 @@ const Review = ({ name, image, rating, review }) => {
         </div>
         
       </div>
-      <p className="mt-4 text-gray-700">{review}</p>
+      <p className="mt-4 text-gray-700">"{review}"</p>
     </div>
   );
 };
@@ -68,6 +76,22 @@ const ReviewList = () => {
         <Review key={index} {...review} />
       ))}
     </div>
+    <div className="flex absolute w-full pt-8">
+          <button
+            className="border border-orange-500 text-orange-500 rounded-full py-2 px-4"
+            style={{ marginRight: '20px' }}
+            onClick={handlePrevClick}
+          >
+            {'<'}
+          </button>
+          <button 
+          className="border border-orange-500 text-orange-500 rounded-full py-2 px-4"
+          onClick={handleNextClick}
+          >
+            {'>'}
+          </button>
+          
+        </div>
     </div>
   );
 };
