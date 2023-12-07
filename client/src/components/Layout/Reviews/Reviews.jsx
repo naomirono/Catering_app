@@ -95,14 +95,14 @@ const ReviewList = () => {
 </div>
     <div className="absolute top-[230px] right-4 transform -translate-y-1/2 flex items-center space-x-2">
         <button
-          className="border border-orange-500 text-orange-500 rounded-full py-2 px-4"
+          className="border-2 border-orange-500 text-orange-500 rounded-full py-2 px-4"
           style={{ marginRight: '10px' }}
           onClick={handlePrevClick}
         >
           {'<'}
         </button>
         <button
-          className="border border-orange-500 text-orange-500 rounded-full py-2 px-4"
+          className="border-2 border-orange-500 text-orange-500 rounded-full py-2 px-4"
           onClick={handleNextClick}
         >
           {'>'}
