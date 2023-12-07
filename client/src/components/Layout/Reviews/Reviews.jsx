@@ -27,7 +27,7 @@ const handlePrevClick = () => {
 
 const Review = ({ name, image, rating, review }) => {
   return (
-    <div className="max-w-xl w-full mx-auto p-4 bg-white shadow-md my-4">
+    <div className="max-w-xl w-full mx-auto p-4 bg-white shadow-md my-4 rounded-lg">
       <div className="flex items-center justify-between">
         <div className="flex items-center">
           <img src={image} alt={name} className="w-10 h-10 rounded-full mr-4" />
@@ -69,7 +69,7 @@ const chefReviews = [
 
 const ReviewList = () => {
   return (
-      <div className='max-w-[1100px] mx-auto py-16'>
+      <div className='max-w-[1100px] mx-auto py-16 relative'>
       <h2 className='text-2xl font-semibold text-center mb-4 text-orange-500'>Testimonials</h2>
       <h2 className="text-5xl font-semibold text-center mb-12 text-white max-w-[700px] mx-auto">We have worked with thousands of amazing people</h2>
     <div className="flex space-x-4">
@@ -77,22 +77,37 @@ const ReviewList = () => {
         <Review key={index} {...review} />
       ))}
     </div>
-    <div className="flex absolute w-full pt-8">
-          <button
-            className="border border-orange-500 text-orange-500 rounded-full py-2 px-4"
-            style={{ marginRight: '20px' }}
-            onClick={handlePrevClick}
-          >
-            {'<'}
-          </button>
-          <button 
+    <div>
+  <div class="flex items-center space-x-2 text-base mt-4">
+    <h4 class="font-semibold text-orange-500">Client Reviews</h4>
+    <span class="rounded-full bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-700">204</span>
+  </div>
+  <div class="mt-3 flex -space-x-2 overflow-hidden">
+    <img class="inline-block h-12 w-12 rounded-full ring-2 ring-black" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
+    <img class="inline-block h-12 w-12 rounded-full ring-2 ring-black" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
+    <img class="inline-block h-12 w-12 rounded-full ring-2 ring-black" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80" alt=""/>
+    <img class="inline-block h-12 w-12 rounded-full ring-2 ring-black" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
+    <img class="inline-block h-12 w-12 rounded-full ring-2 ring-black" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
+  </div>
+  <div class="mt-3 text-sm font-medium">
+    <a href="#" class="text-gray-200">+ 198 others</a>
+  </div>
+</div>
+    <div className="absolute top-[230px] right-4 transform -translate-y-1/2 flex items-center space-x-2">
+        <button
+          className="border border-orange-500 text-orange-500 rounded-full py-2 px-4"
+          style={{ marginRight: '10px' }}
+          onClick={handlePrevClick}
+        >
+          {'<'}
+        </button>
+        <button
           className="border border-orange-500 text-orange-500 rounded-full py-2 px-4"
           onClick={handleNextClick}
-          >
-            {'>'}
-          </button>
-          
-        </div>
+        >
+          {'>'}
+        </button>
+      </div>
     </div>
   );
 };
