@@ -49,19 +49,19 @@ const Review = ({ name, image, rating, review }) => {
 const chefReviews = [
   {
     name: 'Alice Baker',
-    image: 'https://placekitten.com/50/50',
+    image: 'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     rating: 4.5,
     review: 'I found an amazing chef through this website! The variety of talented chefs and the ease of the search made my experience delightful.',
   },
   {
     name: 'Charlie Foodie',
-    image: 'https://placekitten.com/51/51',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80',
     rating: 5.0,
     review: 'The chef finder website exceeded my expectations. I connected with a skilled chef who prepared a fantastic meal for my event. Highly recommended!',
   },
   {
     name: 'Eva Gourmet',
-    image: 'https://placekitten.com/52/52',
+    image: 'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     rating: 4.2,
     review: 'As a food enthusiast, I appreciate the high-quality chefs available on this platform. The user-friendly interface makes it easy to discover and hire top-notch culinary talent.',
   },
