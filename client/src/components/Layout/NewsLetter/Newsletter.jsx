@@ -26,25 +26,17 @@ const NewsletterSubscription = () => {
         }}>
         <div className="absolute inset-0 bg-black opacity-75"></div>
         <div className="p-16 relative z-10 flex flex-col items-center justify-center max-w-[800px] mx-auto">
-          <h2 className="text-3xl font-bold mb-4 text-white">Subscribe to Our Newsletter </h2>
-          <p className="text-gray-400 mb-14">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">Subscribe to Our Newsletter </h2>
+          <p className="mb-14 text-lg leading-8 text-gray-400">
             Stay updated on new chefs, promotions, and cooking tips. Don't miss out on the latest culinary experiences!
           </p>
-          <div className="flex items-center">
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="p-2 border border-gray-300 rounded-l focus:outline-none w-[400px]"
-              value={email}
-              onChange={handleEmailChange}
-            />
-            <button
-              className="bg-orange-500 text-white px-4 py-2.5 rounded-r hover:bg-orange-600"
-              onClick={handleSubscribe}
-            >
-              Subscribe
-            </button>
-          </div>
+          
+          <div class="mt-3 flex max-w-md gap-x-4">
+          <label for="email-address" class="sr-only">Email address</label>
+          <input id="email-address" name="email" type="email" autocomplete="email" required class="w-[400px] flex-auto rounded-md border-0 border-orange-300 px-3.5 py-2 text-black shadow-sm  sm:text-sm sm:leading-6" placeholder="Enter your email" value={email}
+              onChange={handleEmailChange}/>
+          <button type="submit" class="flex-none rounded-md bg-orange-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-700 ">Subscribe</button>
+        </div>
         </div>
       </div>
     </section>
