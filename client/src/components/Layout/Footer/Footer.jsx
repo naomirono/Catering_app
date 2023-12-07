@@ -91,7 +91,7 @@ const Footer = () => {
 
       {/* Rights Reserved and Social Icons */}
       <div className="max-w-[1100px] mx-auto flex justify-between items-center mt-4">
-        <p className="text-sm">© 2023 Chef Connect. All rights reserved.</p>
+        <p className="text-sm">&copy; {new Date().getFullYear()} Chef Connect. All rights reserved.</p>
 
         {/* Social Media Icons */}
         <div className="flex items-center space-x-6">
