@@ -5,6 +5,10 @@ import HowItWorks from './components/Layout/HowItWorks/HowItWorks'
 import Blog from './components/Layout/Blog/Blog'
 import FeaturedMenus from './components/Layout/Featured/FeaturedMenu'
 import SpecialOccasions from './components/Layout/SpecialOcassion/SpecialOccasion'
+import DownloadApp from './components/Layout/Download/Download'
+import Newsletter from './components/Layout/NewsLetter/Newsletter'
+import ReviewList from './components/Layout/Reviews/Reviews'
+import Footer from './components/Layout/Footer/Footer'
 
 function App() {
 
@@ -17,7 +21,10 @@ function App() {
       <FeaturedMenus/>
       <Blog/>
       <SpecialOccasions/>
-      
+      <DownloadApp/>
+      <Newsletter/>
+      <ReviewList/>
+      <Footer/>
       
       </>
   )
