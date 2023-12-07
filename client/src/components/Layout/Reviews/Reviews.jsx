@@ -1,28 +1,42 @@
-// src/Review.js
 import React from 'react';
+import { FaStar } from 'react-icons/fa';
+
+const renderStars = (rating) => {
+  const starCount = 5;
+  const fullStarCount = Math.floor(rating);
+  const remainingStarCount = starCount - fullStarCount;
+
+  const stars = [];
+  for (let i = 0; i < fullStarCount; i++) {
+    stars.push(<FaStar key={`full-star-${i}`} className="text-yellow-500" />);
+  }
+  for (let i = 0; i < remainingStarCount; i++) {
+    stars.push(<FaStar key={`empty-star-${i}`} className="text-gray-300" />);
+  }
+
+  return stars;
+};
 
 const Review = ({ name, image, rating, review }) => {
-    return (
-        <section className='py-16'>
-      <div className="max-w-xl w-full mx-auto p-4 bg-white shadow-md my-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            <img src={image} alt={name} className="w-10 h-10 rounded-full mr-4" />
-            <div>
-              <p className="text-lg font-semibold">{name}</p>
-              <div className="flex items-center">
-                <span className="text-yellow-500">★</span>
-                <span className="ml-1 text-gray-600">{rating}</span>
-              </div>
+  return (
+    <div className="max-w-xl w-full mx-auto p-4 bg-white shadow-md my-4">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center">
+          <img src={image} alt={name} className="w-10 h-10 rounded-full mr-4" />
+          <div>
+            <p className="text-lg font-semibold">{name}</p>
+            <div className="flex items-center">
+              {renderStars(rating)}
+              <span className="ml-1 text-gray-600">{rating}</span>
             </div>
           </div>
-          <div className="text-yellow-500 font-semibold">{rating}</div>
         </div>
-        <p className="mt-4 text-gray-700">{review}</p>
+        
       </div>
-      </section>
-    );
-  };
+      <p className="mt-4 text-gray-700">{review}</p>
+    </div>
+  );
+};
 
 const chefReviews = [
   {
@@ -47,8 +61,8 @@ const chefReviews = [
 
 const ReviewList = () => {
   return (
-      <div className='max-w-[1100px] mx-auto'>
-      <h2 className="text-5xl font-semibold text-center  text-white">Testimonials from Our <span className='text-orange-500'>Clients</span></h2>
+      <div className='max-w-[1100px] mx-auto py-16'>
+      <h2 className="text-5xl font-semibold text-center mb-12 text-white">Testimonials from Our <span className='text-orange-500'>Clients</span></h2>
     <div className="flex space-x-4">
       {chefReviews.map((review, index) => (
         <Review key={index} {...review} />
