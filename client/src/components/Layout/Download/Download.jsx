@@ -28,7 +28,7 @@ const DownloadApp = () => {
       {/* Left Section with Image */}
       <div className="w-1/2 pr-8">
         <img
-          src="/src/assets/DownloadApp.png" // Replace with the actual image path
+          src="/src/assets/DownloadApp.png" 
           alt="Chef Connect App"
           className="w-full h-auto"
         />
