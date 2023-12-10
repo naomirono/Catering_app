@@ -1,4 +1,3 @@
-// Footer.js
 import React from 'react';
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
 
@@ -10,16 +9,16 @@ const Footer = () => {
 
         <div className="flex space-x-20 ">
         <div className="flex items-start flex-col">
-          {/* Logo */}
+          
           <img
             src="/src/assets/CateringLogo2.png"
             alt="Logo"
             className="w-12 h-12 rounded-full bg-white mb-4"
           />
-          {/* Paragraph */}
+          
           <p className="text-sm w-[400px]">Chef Connect brings the finest chefs to your doorstep, turning every meal into a celebration of taste and innovation.</p>
         </div>
-          {/* Solutions */}
+          
           <div>
             <h4 className="text-lg font-semibold mb-2">Solutions</h4>
             <ul className="text-sm ">
@@ -35,7 +34,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Support */}
+          
           <div>
             <h4 className="text-lg font-semibold mb-2">Support</h4>
             <ul className="text-sm ">
@@ -51,7 +50,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Company */}
+          
           <div>
             <h4 className="text-lg font-semibold mb-2">Company</h4>
             <ul className="text-sm ">
@@ -67,7 +66,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Legal */}
+          
           <div>
             <h4 className="text-lg font-semibold mb-2">Legal</h4>
             <ul className="text-sm ">
@@ -80,7 +79,7 @@ const Footer = () => {
               <li className='py-1'>
                 <a href="#">Terms of Service</a>
               </li>
-              {/* Add more links as needed */}
+              
             </ul>
           </div>
         </div>
@@ -107,7 +106,7 @@ const Footer = () => {
           <a href="#" className="text-white">
             <FaYoutube size={24}/>
           </a>
-          {/* Add more social media icons as needed */}
+          
         </div>
       </div>
     </footer>

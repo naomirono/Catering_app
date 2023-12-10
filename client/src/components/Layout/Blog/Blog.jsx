@@ -1,5 +1,3 @@
-// BlogRecipeSection.js
-
 import React from 'react';
 
 const BlogRecipeSection = () => {
@@ -10,7 +8,7 @@ const BlogRecipeSection = () => {
       author: 'Chef John Doe',
       date: 'December 15, 2023',
       time: '5 min',
-      profileImage: 'https://placekitten.com/50/50', // Replace with actual image URL
+      profileImage: 'https://placekitten.com/50/50', 
     },
     {
       title: 'Delicious Holiday Dessert Recipes',
@@ -18,7 +16,7 @@ const BlogRecipeSection = () => {
       author: 'Chef Jane Smith',
       date: 'December 10, 2023',
       time: '6 min',
-      profileImage: 'https://placekitten.com/50/50', // Replace with actual image URL
+      profileImage: 'https://placekitten.com/50/50', 
     },
     {
       title: 'Behind the Scenes: A Day in the Life of a Culinary Artist',
@@ -26,7 +24,7 @@ const BlogRecipeSection = () => {
       author: 'Chef Alex Johnson',
       date: 'December 5, 2023',
       time: '10 min',
-      profileImage: 'https://placekitten.com/50/50', // Replace with actual image URL
+      profileImage: 'https://placekitten.com/50/50', 
     },
   ];
 
