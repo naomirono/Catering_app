@@ -1,32 +1,22 @@
-import Header from './components/Layout/Header/Header'
-import Hero from './components/Layout/Hero/Hero'
-import FeaturedChefsSection from './components/Layout/Featured/FeaturedChefsSection'
-import HowItWorks from './components/Layout/HowItWorks/HowItWorks'
-import Blog from './components/Layout/Blog/Blog'
-import FeaturedMenus from './components/Layout/Featured/FeaturedMenu'
-import SpecialOccasions from './components/Layout/SpecialOcassion/SpecialOccasion'
-import DownloadApp from './components/Layout/Download/Download'
-import Newsletter from './components/Layout/NewsLetter/Newsletter'
-import ReviewList from './components/Layout/Reviews/Reviews'
-import Footer from './components/Layout/Footer/Footer'
+import React from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import LandingPage from './components/Pages/LandingPage/LandingPage';
+import Login from './components/Pages/Login';
+import SignUpOne from './components/Pages/SignUp';
+import SignUpTwo from './components/Pages/SignUpTwo';
 
 function App() {
 
   return (
-    <>
-      <Header/>
-      <Hero/>
-      <HowItWorks/>
-      <FeaturedChefsSection/>
-      <FeaturedMenus/>
-      <Blog/>
-      <SpecialOccasions/>
-      <DownloadApp/>
-      <Newsletter/>
-      <ReviewList/>
-      <Footer/>
-      
-      </>
+    <Router>
+      <Routes>
+        <Route path='/' element={<LandingPage/>} />
+        <Route path='/login' element={<Login/>} />
+        <Route path='/SignUpOne' element={<SignUpOne/>} />
+        <Route path='/SignUpTwo' element={<SignUpTwo/>} />
+
+      </Routes>
+    </Router>
   )
 }
 
