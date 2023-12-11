@@ -32,8 +32,8 @@ const NewsletterSubscription = () => {
           </p>
           
           <div className="mt-3 flex max-w-md gap-x-4">
-          <label for="email-address" className="sr-only text-black">Email address</label>
-          <input id="email-address" name="email" type="email" autocomplete="email" required className="w-[400px] flex-auto rounded-md border-0 border-orange-300 px-3.5 py-2 text-black shadow-sm  sm:text-sm sm:leading-6" placeholder="Enter your email" value={email}
+          <label htmlFor="email-address" className="sr-only text-black">Email address</label>
+          <input id="email-address" name="email" type="email" autoComplete="email" required className="w-[400px] flex-auto rounded-md border-0 border-orange-300 px-3.5 py-2 text-black shadow-sm  sm:text-sm sm:leading-6" placeholder="Enter your email" value={email}
               onChange={handleEmailChange}/>
           <button type="submit" className="flex-none rounded-md bg-orange-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-700 ">Subscribe</button>
         </div>
