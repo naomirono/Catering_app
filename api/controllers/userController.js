@@ -2,15 +2,13 @@ const crypto = require("crypto");
 const User = require("../models/userModel");
 const Token = require("../models/tokenModel");
 const verifyToken = require("../utils/jwt");
-const cloudinary = require("../utils/cloudinary");
-const { fileSizeFormatter } = require("../utils/fileUpload");
 const sendMail = require("../utils/sendMail");
 
 // @desc   Register a new user
 // route   POST /api/v2/users/register
 // @access Public
 exports.registerUser = async (req, res, next) => {
-  const { name, email, password} = req.body;
+  const { name, email, password } = req.body;
 
   // Validation
   try {
@@ -189,7 +187,12 @@ exports.forgotPassword = async (req, res, next) => {
 
       try {
         await sendMail(subject, message, send_to, sent_from);
-        res.status(200).json({ success: true, message: "Reset email sent, kindly check your email" });
+        res
+          .status(200)
+          .json({
+            success: true,
+            message: "Reset email sent, kindly check your email",
+          });
       } catch (err) {
         res.status(400);
         throw new Error("Email not sent,please try again");

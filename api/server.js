@@ -20,6 +20,7 @@ app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use(bodyParser.json());
 app.use(cookieParser());
+
 app.use(
   cors({
     origin: ["http://localhost:5173"],
@@ -36,7 +37,7 @@ app.use(notFound);
 
 const connect = async () => {
   try {
-    await mongoose.connect(process.env.MONGODB_URI, {
+    await mongoose.connect(process.env.MONGO_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });

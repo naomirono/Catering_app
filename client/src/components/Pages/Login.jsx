@@ -1,22 +1,21 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import Logo from '/src/assets/LoginLogo.png';
-import Fariji from '/src/assets/logo.svg';
-import AppLoader from '../utils/AppLoader';
-import { AppError } from '../utils/AppError';
-
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import Logo from "/src/assets/LoginLogo.png";
+import Fariji from "/src/assets/logo.svg";
+import AppLoader from "../utils/AppLoader";
+import { AppError } from "../utils/AppError";
 
 const Login = () => {
-  const [phone, setPhone] = useState('');
-  const [password, setPassword] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+  const [phone, setPhone] = useState("");
+  const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   const navigate = useNavigate();
 
   const handleSignIn = (e) => {
     e.preventDefault();
-    setErrorMessage('');
+    setErrorMessage("");
     setIsLoading(true);
 
     // Perform your authentication logic here
@@ -25,21 +24,21 @@ const Login = () => {
     // For demonstration purposes, navigate to '/home' after a successful login
     // Replace this logic with your actual authentication logic
     setTimeout(() => {
-      const fakeToken = 'fakeAccessToken'; // Replace with your actual token
+      const fakeToken = "fakeAccessToken"; // Replace with your actual token
       storeToken(fakeToken);
-      navigate('/');
+      navigate("/");
       setIsLoading(false);
-      setPhone('');
-      setPassword('');
+      setPhone("");
+      setPassword("");
     }, 2000); // Simulating an asynchronous operation
   };
 
   return (
-    <div className='flex h-screen bg-white'>
+    <div className="flex h-screen bg-white">
       {/* Left side */}
-      <div className='hidden sm:flex w-1/2 bg-[#FF9549] justify-center items-center'>
-        <div className='text-center'>
-          <img src={Logo} alt='logo' />
+      <div className="hidden sm:flex w-1/2 bg-[#FF9549] justify-center items-center">
+        <div className="text-center">
+          <img src={Logo} alt="logo" />
           {/* <div className='flex justify-center mt-2'>
             <img src={Fariji} alt='logo' className='h-16' />
           </div> */}
@@ -47,65 +46,73 @@ const Login = () => {
       </div>
 
       {/* Right side */}
-      <div className='w-full sm:w-1/2 flex justify-center items-center'>
-        <div className='sm:w-96 p-5'>
-        <div className='text-center'>
-            <h2 className='font-fira text-medium text-4xl text-[var(--secondary)]'>
+      <div className="w-full sm:w-1/2 flex justify-center items-center">
+        <div className="sm:w-96 p-5">
+          <div className="text-center">
+            <h2 className="font-fira text-medium text-4xl text-[var(--secondary)]">
               Welcome Again
             </h2>
-            <h2 className='mt-3 mb-10 text-[var(--secondary)]'>
+            <h2 className="mt-3 mb-10 text-[var(--secondary)]">
               Connect with talented chefs
             </h2>
-       </div>
-
+          </div>
 
           {<AppError error={errorMessage} />}
 
           <form onSubmit={handleSignIn}>
-            <label htmlFor='email' className='text-[14px] font-inter text-[var(--tertiary)]'>
+            <label
+              htmlFor="email"
+              className="text-[14px] font-inter text-[var(--tertiary)]"
+            >
               Email Address
             </label>
             <input
-              type='email'
-              id='email'
+              type="email"
+              id="email"
               value={phone}
-              name='phone'
+              name="phone"
               onChange={(e) => {
-                setPhone(e.target.value)
+                setPhone(e.target.value);
               }}
-              placeholder='Email'
+              placeholder="Email"
               required
-              className='w-full rounded-lg placeholder-[var(--primary)] mb-5 border border-[#94a3b8] px-[12px] py-[8px]'
+              className="w-full rounded-lg placeholder-[var(--primary)] mb-5 border border-[#94a3b8] px-[12px] py-[8px]"
             />
-            <label htmlFor='password' className='text-[14px] font-inter text-[var(--tertiary)] mt-10'>
+            <label
+              htmlFor="password"
+              className="text-[14px] font-inter text-[var(--tertiary)] mt-10"
+            >
               Password
             </label>
             <input
-              type='password'
-              id='password'
+              type="password"
+              id="password"
               value={password}
-              name='password'
+              name="password"
               onChange={(e) => {
-                setPassword(e.target.value)
+                setPassword(e.target.value);
               }}
-              placeholder='****'
+              placeholder="****"
               required
-              className='w-full rounded-lg placeholder-[var(--primary)] border border-[#94a3b8] px-[12px] py-[8px]'
+              className="w-full rounded-lg placeholder-[var(--primary)] border border-[#94a3b8] px-[12px] py-[8px]"
             />
-            <p className='text-sm text-[var(--primary)] text-right mt-3'>
-              <Link to='#'>Forgot Password</Link>
+            <p className="text-sm text-[var(--primary)] text-right mt-3">
+              <Link to="#">Forgot Password</Link>
             </p>
             <button
-              type='submit'
-              className='bg-[var(--primary)] text-white rounded-lg py-2 px-4 w-full mt-12'
+              type="submit"
+              className="bg-[var(--primary)] text-white rounded-lg py-2 px-4 w-full mt-12"
               disabled={isLoading}
             >
-              {isLoading ? <AppLoader /> : 'Sign In'}
+              {isLoading ? <AppLoader /> : "Sign In"}
             </button>
           </form>
 
-          <p className='font-medium text-sm text-center mt-5 text-[var(--tertiary-dark)]'>
-            Already have an account? <Link to='/registration' className='text-[var(--primary)]'>Sign Up</Link>
+          <p className="font-medium text-sm text-center mt-5 text-[var(--tertiary-dark)]">
+            Already have an account?{" "}
+            <Link to="/signUpOne" className="text-[var(--primary)]">
+              Sign Up
+            </Link>
           </p>
         </div>
       </div>

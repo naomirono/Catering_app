@@ -51,6 +51,8 @@ const SignUpOne = () => {
     };
     setLoading(true);
 
+    console.log(userInfo);
+
     try {
       const res = await signUp(userInfo).unwrap();
       dispatch(setCredentials({ ...res }));
