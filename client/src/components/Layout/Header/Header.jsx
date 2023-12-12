@@ -20,6 +20,12 @@ const Header = () => {
     navigate("/SignUpOne"); // Navigate to '/SignUpOne'
   };
 
+  const getProfileInitials = (name) => {
+    if (!name) return "";
+    const initials = name.split(" ").map((word) => word[0]).join("").toUpperCase();
+    return initials;
+  };
+
   return (
     <header className="bg-black text-white p-4">
       <div className="container mx-auto custom-container flex items-center justify-between">
@@ -32,7 +38,7 @@ const Header = () => {
         </div>
 
         <nav>
-          <ul className="flex space-x-4">
+          <ul className="flex space-x-6">
             <li>
               <a href="/" className="hover:text-orange-500 hover:underline">
                 Home
@@ -68,11 +74,13 @@ const Header = () => {
         <div className="flex items-center">
           {userInfo ? (
             <>
-              <img
-                src={userInfo.profilePic}
-                alt="User Profile"
-                className="h-12 w-12 rounded-full mr-2"
-              />
+              <div
+                className="h-12 w-12 rounded-full mr-2 bg-orange-500 flex items-center justify-center cursor-pointer"
+              >
+                <span className="text-lg font-semibold text-white">
+                  {getProfileInitials(userInfo.name)}
+                </span>
+              </div>
               <span className="text-lg font-semibold">{userInfo.name}</span>
             </>
           ) : (
