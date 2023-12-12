@@ -1,33 +1,34 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import LogoImage from '/src/assets/CateringLogo2.png';
+import { useState } from "react";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import LogoImage from "/src/assets/CateringLogo2.png";
 
 const Header = () => {
+  const { userInfo } = useSelector((state) => state.auth);
   const [isAuthenticated, setAuthenticated] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = () => {
     // Implement your login logic here
     setAuthenticated(true);
-    navigate('/login'); // Navigate to '/login'
-  };
-
-  const handleLogout = () => {
-    // Implement your logout logic here
-    setAuthenticated(false);
+    navigate("/login"); // Navigate to '/login'
   };
 
   const handleSignUp = () => {
     // Implement your sign-up logic here
     // This could redirect the user to a sign-up page or show a modal
-    navigate('/SignUpOne'); // Navigate to '/SignUpOne'
+    navigate("/SignUpOne"); // Navigate to '/SignUpOne'
   };
 
   return (
     <header className="bg-black text-white p-4">
       <div className="container mx-auto custom-container flex items-center justify-between">
         <div>
-          <img src={LogoImage} alt="Chef Connect Logo" className="h-12 w-auto" />
+          <img
+            src={LogoImage}
+            alt="Chef Connect Logo"
+            className="h-12 w-auto"
+          />
         </div>
 
         <nav>
@@ -38,32 +39,41 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a href="/about" className="hover:text-orange-500 hover:underline">
+              <a
+                href="/about"
+                className="hover:text-orange-500 hover:underline"
+              >
                 Chef
               </a>
             </li>
             <li>
-              <a href="/about" className="hover:text-orange-500 hover:underline">
+              <a
+                href="/about"
+                className="hover:text-orange-500 hover:underline"
+              >
                 How It Works
               </a>
             </li>
             <li>
-              <a href="/contact" className="hover:text-orange-500 hover:underline">
+              <a
+                href="/contact"
+                className="hover:text-orange-500 hover:underline"
+              >
                 Pricing
               </a>
             </li>
           </ul>
         </nav>
 
-        <div>
-          {isAuthenticated ? (
+        <div className="flex items-center">
+          {userInfo ? (
             <>
-              <button
-                onClick={handleLogout}
-                className="bg-white text-blue-500 px-4 py-2 rounded-full focus:outline-none"
-              >
-                Sign Out
-              </button>
+              <img
+                src={userInfo.profilePic}
+                alt="User Profile"
+                className="h-12 w-12 rounded-full mr-2"
+              />
+              <span className="text-lg font-semibold">{userInfo.name}</span>
             </>
           ) : (
             <>
