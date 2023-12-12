@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -19,10 +19,18 @@ const SignUpOne = () => {
   const [userData, setUserData] = useState(initialState);
   const [loading, setLoading] = useState(false);
 
+  const { userInfo } = useSelector((state) => state.auth);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const [signUp, { isLoading }] = useSignUpMutation();
+
+  useEffect(() => {
+    if (userInfo) {
+      navigate("/");
+    }
+  }, [navigate, userInfo]);
 
   //  Handle input
   const handleInputChange = (e) => {
@@ -50,7 +58,6 @@ const SignUpOne = () => {
       password: userData.password,
     };
     setLoading(true);
-
 
     try {
       const res = await signUp(userInfo).unwrap();
