@@ -4,7 +4,7 @@ import { chefs } from './FeaturedData';
 
 const FeaturedChefsSection = () => {
   return (
-    <section className=" py-12 relative"
+    <section className=" py-4 relative lg:py-12"
     style={{
         backgroundImage: "url('/src/assets/catering1.jpg')",
         backgroundSize: 'cover',
