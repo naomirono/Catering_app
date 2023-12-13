@@ -1,4 +1,3 @@
-import React from 'react'
 import Header from '../../Layout/Header/Header'
 import Hero from '../../Layout/Hero/Hero';
 import FeaturedChefsSection from '../../Layout/Featured/FeaturedChefsSection'
