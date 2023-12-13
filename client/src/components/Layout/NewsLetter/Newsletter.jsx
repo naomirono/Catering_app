@@ -17,7 +17,7 @@ const NewsletterSubscription = () => {
   };
 
   return (
-    <section className="py-16">
+    <section className="py-8 lg:py-16">
       <div className="container mx-auto max-w-[1000px] relative rounded-lg shadow-md text-center"
         style={{
           backgroundImage: "url('/src/assets/catering1.jpg')",
