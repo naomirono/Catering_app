@@ -79,11 +79,13 @@ const SignUpOne = () => {
       </div>
 
       <div className="flex flex-col h-[100vh] justify-between w-full flex-1">
-        <div className="flex justify-between p-4">
-          <div className="flex gap-1">
-            Step 1<span className="text-[#626262]">of 2</span>
-          </div>
-          <div className="text-[#2A6476] cursor-pointer">Exit</div>
+        <div className="flex justify-end p-4">
+          <Link 
+           to="/"
+           className="text-[#2A6476] cursor-pointer text-right"
+           >
+           Exit
+          </Link>
         </div>
 
         <div className="justify-center flex gap-2 flex-col text-center items-center">
@@ -106,7 +108,7 @@ const SignUpOne = () => {
               name="name"
               value={userData.name}
               onChange={handleInputChange}
-              className="w-[312px] text-[#A6A6A6] placeholder-[#A6A6A6] border border-[#A6A6A6] focus:outline-none h-[41px]"
+              className="w-[312px] text-black placeholder-[#A6A6A6] border border-[#A6A6A6] focus:outline-none h-[41px]"
               style={{
                 borderRadius: "8px",
                 paddingLeft: "8px",
