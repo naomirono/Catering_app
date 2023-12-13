@@ -43,7 +43,7 @@ const BlogRecipeSection = () => {
           <p className="text-lg text-gray-500 mb-12">Indulge in culinary excellence with Chef Tips and Recipes – your passport to a world of delicious creations. From grilling mastery to festive treats, our chefs unlock the secrets behind extraordinary meals.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-4 lg:mx-0">
           {blogPosts.map((post, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md flex flex-col h-full">
               <h3 className="text-xl font-semibold mb-4">{post.title}</h3>
