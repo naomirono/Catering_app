@@ -31,7 +31,7 @@ const DownloadApp = () => {
         <img
           src="/src/assets/DownloadApp.png" 
           alt="Chef Connect App"
-          className="w-full h-auto chef-img"
+          className="w-full h-auto"
         />
       </div>
 
