@@ -45,14 +45,14 @@ const SpecialOccasionsSection = () => {
 
   return (
     <section className="py-16">
-      <div className="container mx-auto max-w-[900px]">
+      <div className="container mx-auto max-w-[900px] p-4">
         <h2 className="text-5xl font-bold mb-8 text-white">Special Occasions with <span className='text-orange-500'>Personal Chefs</span></h2>
         
-        <div className="flex mb-8">
+        <div className="flex flex-wrap mb-8">
           {specializations.map((specialization) => (
             <button
               key={specialization}
-              className={`mr-4 px-4 py-2 text-sm rounded-full focus:outline-none ${
+              className={`mb-2 mr-2 lg:mr-4 px-3 py-1.5 lg:px-4 lg:py-2 text-sm rounded-full focus:outline-none ${
                 activeSpecialization === specialization ? 'bg-orange-500 text-white' : 'bg-gray-200 text-gray-700'
               }`}
               onClick={() => handleTabClick(specialization)}
@@ -65,7 +65,7 @@ const SpecialOccasionsSection = () => {
         {/* Display Chefs for the Active Specialization */}
         <div className="grid grid-cols-1  gap-8 ">
           {specialOccasionChefs[activeSpecialization].map((chef, index) => (
-            <div key={index} className="p-8 rounded-lg shadow-md flex relative overflow-hidden h-[50vh]">
+            <div key={index} className="lg:p-8 rounded-lg shadow-md flex flex-col lg:flex-row relative overflow-hidden h-[50vh]">
     <img
       src={chef.image}
       alt={`Chef ${chef.name}`}
@@ -79,7 +79,7 @@ const SpecialOccasionsSection = () => {
         className="w-full h-full"
       />
     </div>
-    <div className="relative z-10 top-14 ml-10 ">
+    <div className="relative z-10 top-14 mx-2 lg:ml-10 ">
       <h3 className="text-xl font-semibold mb-2 text-white">{chef.name}</h3>
       <p className="text-gray-600 mb-4">{chef.tips}</p>
     </div>
