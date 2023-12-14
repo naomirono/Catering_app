@@ -19,7 +19,7 @@ const NewsletterSubscription = () => {
 
   return (
     <section className="py-4 lg:py-16">
-      <div className="container mx-0 lg:mx-auto max-w-[380px] lg:max-w-[1000px] relative rounded-lg shadow-md text-center"
+      <div className="container mx-0 lg:mx-auto max-w-[370px] lg:max-w-[1000px] relative rounded-lg shadow-md text-center"
         style={{
           backgroundImage: "url('/src/assets/catering1.jpg')",
           backgroundSize: 'cover',
@@ -27,8 +27,8 @@ const NewsletterSubscription = () => {
         }}>
         <div className="absolute inset-0 bg-black opacity-75"></div>
         <div className="p-2 lg:p-16 relative z-10 flex flex-col items-center justify-center max-w-[800px] mx-auto">
-          <h2 className="text-2xl Lg:text-3xl font-bold tracking-tight text-white mb-4">Subscribe to Our Newsletter </h2>
-          <p className="mb-4 lg:mb-14 text-md lg:text-lg leading-8 text-gray-400">
+          <h2 className="text-2xl md:text-3xl Lg:text-3xl font-bold tracking-tight text-white mb-4">Subscribe to Our Newsletter </h2>
+          <p className="mb-4 lg:mb-14 text-md md: text-lg lg:text-lg leading-8 text-gray-400">
             Stay updated on new chefs, promotions, and cooking tips. Don't miss out on the latest culinary experiences!
           </p>
           
