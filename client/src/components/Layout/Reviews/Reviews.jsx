@@ -93,7 +93,7 @@ const ReviewList = () => {
     <a href="#" className="text-gray-200">+ 198 others</a>
   </div>
 </div>
-    <div className="absolute top-[230px] right-4 transform -translate-y-1/2 flex items-center space-x-2">
+    <div className="absolute top-[230px] right-4 transform -translate-y-1/2 flex items-center space-x-2 hidden lg:block">
         <button
           className="border-2 border-orange-500 text-orange-500 rounded-full py-2 px-4"
           style={{ marginRight: '10px' }}
