@@ -69,10 +69,10 @@ const chefReviews = [
 
 const ReviewList = () => {
   return (
-      <div className='max-w-[1100px] mx-auto py-16 relative'>
+      <div className='max-w-[1100px] mx-auto py-16 relative px-3'>
       <h2 className='text-2xl font-semibold text-center mb-4 text-orange-500'>Testimonials</h2>
-      <h2 className="text-5xl font-semibold text-center mb-12 text-white max-w-[700px] mx-auto">We have worked with thousands of amazing people</h2>
-    <div className="flex space-x-4">
+      <h2 className="text-4xl lg:text-5xl font-semibold text-center mb-12 text-white max-w-[700px] mx-auto">We have worked with thousands of amazing people</h2>
+    <div className="flex flex-col lg:flex-row  lg:space-x-4">
       {chefReviews.map((review, index) => (
         <Review key={index} {...review} />
       ))}
