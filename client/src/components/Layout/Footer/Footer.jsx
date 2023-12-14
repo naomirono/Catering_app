@@ -4,20 +4,20 @@ import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
 const Footer = () => {
   return (
     <footer className="bg-orange-500 text-white py-8">
-      <div className="max-w-[1100px] mx-auto flex justify-between items-center">
+      <div className="max-w-[1100px] mx-auto flex justify-between items-center hidden lg:block">
         
 
         <div className="flex space-x-20 ">
-        <div className="flex items-start flex-col">
+          <div className="flex items-start flex-col">
           
-          <img
-            src="/src/assets/CateringLogo2.png"
-            alt="Logo"
-            className="w-12 h-12 rounded-full bg-white mb-4"
-          />
+            <img
+              src="/src/assets/CateringLogo2.png"
+              alt="Logo"
+              className="w-12 h-12 rounded-full bg-white mb-4"
+            />
           
-          <p className="text-sm w-[400px]">Chef Connect brings the finest chefs to your doorstep, turning every meal into a celebration of taste and innovation.</p>
-        </div>
+            <p className="text-sm w-[400px]">Chef Connect brings the finest chefs to your doorstep, turning every meal into a celebration of taste and innovation.</p>
+          </div>
           
           <div>
             <h4 className="text-lg font-semibold mb-2">Solutions</h4>
@@ -86,11 +86,11 @@ const Footer = () => {
       </div>
 
       {/* Bottom Border */}
-      <div className="max-w-[1100px] mx-auto border-t border-white mt-4"></div>
+      <div className="max-w-[1100px] mx-auto border-t border-white lg:mt-4"></div>
 
       {/* Rights Reserved and Social Icons */}
-      <div className="max-w-[1100px] mx-auto flex justify-between items-center mt-4">
-        <p className="text-sm">&copy; {new Date().getFullYear()} Chef Connect. All rights reserved.</p>
+      <div className="max-w-[1100px] mx-auto flex flex-col lg:flex-row justify-between items-center mt-4">
+        <p className="text-sm lg:mr-6 mb-4 lg:mb-0 text-center lg:text-left">&copy; {new Date().getFullYear()} Chef Connect. All rights reserved.</p>
 
         {/* Social Media Icons */}
         <div className="flex items-center space-x-6">
@@ -106,7 +106,6 @@ const Footer = () => {
           <a href="#" className="text-white">
             <FaYoutube size={24}/>
           </a>
-          
         </div>
       </div>
     </footer>
