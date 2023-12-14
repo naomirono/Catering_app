@@ -17,11 +17,11 @@ const FeaturedMenus = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8">
           {menusData.map((menu) => (
-            <div key={menu.id} className="py-2 flex">
+            <div key={menu.id} className="py-2 flex flex-col lg:flex-row">
               {menu.id === 1 && (
                 <>
-                  <img src={menu.image} alt={menu.title} className="w-[210px] h-[210px] object-cover mr-8 " />
-                  <div style={{ marginLeft: '40px' }}>
+                  <img src={menu.image} alt={menu.title} className="w-[210px] h-[210px] object-cover lg:mr-8 ml-10 lg:ml-0" />
+                  <div className='mt-6 lg:mt-0 mx-6 lg:mx-0' style={{ marginLeft: '40px' }}>
                     <h3 className="text-xl font-semibold mb-2 text-white ">{menu.title}</h3>
                     <p className="text-gray-600 mb-4">{menu.description}</p>
                     <p className="text-orange-500 font-semibold">{menu.price}</p>
@@ -31,7 +31,7 @@ const FeaturedMenus = () => {
               )}
               {menu.id === 2 && (
                 <>
-                  <div>
+                  <div className='mt-6 lg:mt-0 mx-6 lg:mx-0'>
                     <h3 className="text-xl font-semibold mb-2 text-white ">{menu.title}</h3>
                     <p className="text-gray-600 mb-4">{menu.description}</p>
                     <p className="text-orange-500 font-semibold">{menu.price}</p>
@@ -43,8 +43,8 @@ const FeaturedMenus = () => {
               )}
               {menu.id === 3 && (
                 <>
-                  <img src={menu.image} alt={menu.title} className="w-[250px] h-[250px] object-cover mr-8 rounded" />
-                  <div style={{ marginLeft: '40px' }}>
+                  <img src={menu.image} alt={menu.title} className="w-[250px] h-[250px] object-cover lg:mr-8 ml-10 lg:ml-0" />
+                  <div className='mt-6 lg:mt-0 mx-6 lg:mx-0' style={{ marginLeft: '40px' }}>
                     <h3 className="text-xl font-semibold mb-2 text-white ">{menu.title}</h3>
                     <p className="text-gray-600 mb-4">{menu.description}</p>
                     <p className="text-orange-500 font-semibold">{menu.price}</p>
