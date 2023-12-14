@@ -1,0 +1,34 @@
+
+
+/* Custom styles for smaller devices */
+@media (max-width: 767px) {
+    
+    
+  
+    .circle-svg-1 {
+        position: absolute;
+        background-color: #f97316;
+        border-radius: 50%;
+        width: 260px; /* Adjust the width as needed */
+        height: 260px; /* Adjust the height as needed */
+        top: 50%; /* Center the circle vertically */
+        left: 35%; /* Center the circle horizontally */
+        transform: translate(-0.5%, 4%);/* Adjust the left position as needed */
+        z-index: -1;
+      }
+
+      .circle-svg-2 {
+        position: absolute;
+        background-color: #f97316;
+        border-radius: 50%;
+        width: 150px; 
+        height: 150px; 
+        top: 27%; 
+        left: 30%; 
+        transform: translate(55%, -1%);
+        z-index: -1;
+      }
+  
+    /* Add more custom styles as needed */
+  }
+  
