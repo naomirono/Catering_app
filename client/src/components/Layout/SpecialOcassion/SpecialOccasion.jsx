@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./specialOcassion.css";
 
 const SpecialOccasionsSection = () => {
   const specializations = ['Weddings', 'Birthdays', 'Anniversaries', 'Corporate Events'];
@@ -44,7 +45,7 @@ const SpecialOccasionsSection = () => {
   };
 
   return (
-    <section className="py-16">
+    <section className="py-8 lg:py-16">
       <div className="container mx-auto max-w-[900px] p-4">
         <h2 className="text-5xl font-bold mb-8 text-white">Special Occasions with <span className='text-orange-500'>Personal Chefs</span></h2>
         
@@ -76,12 +77,12 @@ const SpecialOccasionsSection = () => {
       <img
         src="/src/assets/Splash.svg"  
         alt="Splash Overlay"
-        className="w-full h-full"
+        className="w-full h-full splashSvg"
       />
     </div>
     <div className="relative z-10 top-14 mx-2 lg:ml-10 ">
       <h3 className="text-xl font-semibold mb-2 text-white">{chef.name}</h3>
-      <p className="text-gray-600 mb-4">{chef.tips}</p>
+      <p className="text-gray-400 lg:text-gray-600 mb-4">{chef.tips}</p>
     </div>
   </div>
           ))}
