@@ -15,7 +15,7 @@ const Hero = () => {
 
       <div className="container max-w-[1100px] mx-auto md:my-8 md:px-4 lg:px-0 px-4 relative z-10">
         <div className="flex flex-col-reverse md:flex-row items-center justify-center">
-          <div className="md:w-1/2 mt-2 lg:mt-0 md:ml-20 lg:mb-28 text-white">
+          <div className="md:w-1/2 mt-2 lg:mt-0 md:ml-14 lg:ml-14 lg:mb-28 text-white">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4">
               Unleash Culinary Magic with Chef Connect
             </h2>
@@ -62,7 +62,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-center z-10 absolute bottom-[-55px] right-[250px] hidden lg:block">
+      <div className="flex items-center justify-center z-10 absolute bottom-[-55px] right-[250px] lg:right-[450px] hidden lg:block">
         <div className="bg-white bg-opacity-40 backdrop-filter backdrop-blur-l px-4 pt-4 pb-6 rounded shadow-lg max-w-[1100px] mx-auto">
           <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4">Chef Connect</h2>
 
